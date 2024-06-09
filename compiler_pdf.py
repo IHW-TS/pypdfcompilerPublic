@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog
 import subprocess
 import os
+import sys
 
 class PDFCompressorApp:
     def __init__(self, root):
@@ -51,7 +52,6 @@ class PDFCompressorApp:
             messagebox.showwarning("Warning", "No files selected!")
             return
 
-        # Select output directory and file name in one dialog
         output_file_path = filedialog.asksaveasfilename(
             defaultextension=".pdf",
             filetypes=[("PDF files", "*.pdf")],
@@ -62,8 +62,14 @@ class PDFCompressorApp:
 
         compression_level = self.compression_var.get()
 
+        
+        if hasattr(sys, '_MEIPASS'):
+            gs_path = os.path.join(sys._MEIPASS, 'ghostscript', 'gs', 'bin', 'gswin64c.exe')
+        else:
+            gs_path = 'C:\\pypdfcompiler\\ghostscript\\gs\\bin\\gswin64c.exe'
+
         gs_command = [
-            'gswin64c', '-sDEVICE=pdfwrite', f'-dPDFSETTINGS=/{compression_level}', '-dNOPAUSE', '-dBATCH',
+            gs_path, '-sDEVICE=pdfwrite', f'-dPDFSETTINGS=/{compression_level}', '-dNOPAUSE', '-dBATCH',
             '-sOutputFile=' + output_file_path
         ]
         gs_command.extend(self.selected_files)
@@ -73,9 +79,6 @@ class PDFCompressorApp:
             messagebox.showinfo("Success", f"Files compressed successfully to {output_file_path}")
         except subprocess.CalledProcessError as e:
             messagebox.showerror("Error", f"An error occurred during compression: {e}")
-
-
-
 
 if __name__ == "__main__":
     root = tk.Tk()
