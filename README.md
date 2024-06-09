@@ -1,76 +1,73 @@
 # PDFCompressor
 
-PDFCompressor est une application simple pour compresser plusieurs fichiers PDF. L'outil utilise Ghostscript pour réaliser la compression des fichiers, permettant de réduire la taille des fichiers PDF sans perte de qualité significative. Une version améliorée avec une interface utilisateur optimisée est prévue pour une prochaine mise à jour.
+PDFCompressor is a simple application for compressing multiple PDF files. The tool uses Ghostscript to perform file compression, allowing the reduction of PDF file sizes without significant quality loss. An improved version with an optimized user interface is planned for an upcoming update.
 
-## Fonctionnalités
+## Features
 
-- Sélection de plusieurs fichiers PDF pour la compression.
-- Choix du niveau de compression : `screen`, `ebook`, `printer`, `prepress`, et `default`.
-- Réinitialisation de la sélection des fichiers.
-- Sauvegarde des fichiers compressés avec un nom et un emplacement spécifié par l'utilisateur.
+- Selection of multiple PDF files for compression.
+- Choice of compression level: `screen`, `ebook`, `printer`, `prepress`, and `default`.
+- Resetting the file selection.
+- Saving compressed files with a name and location specified by the user.
 
-## Utilisation
+## Usage
 
-1. **Téléchargement et Exécution :**
-   - Téléchargez l'application compilée depuis [les releases](https://github.com/IHW-TS/pypdfcompiler/releases).
-   - Extrayez le contenu et exécutez `PDFCompressor.exe`.
+1. **Download and Execution:**
+   - Download the compiled application from [the releases](https://github.com/IHW-TS/pypdfcompiler/releases).
+   - Extract the content and execute `PDFCompressor.exe`.
 
-2. **Sélection des fichiers :**
-   - Cliquez sur le bouton "Select PDFs" pour choisir les fichiers PDF à compresser.
+2. **File Selection:**
+   - Click on the "Select PDFs" button to choose the PDF files to compress.
 
-3. **Choix du niveau de compression :**
-   - Sélectionnez le niveau de compression souhaité dans le menu déroulant.
+3. **Compression Level Choice:**
+   - Select the desired compression level from the dropdown menu.
 
-4. **Compression et Sauvegarde :**
-   - Cliquez sur "Compress" pour compresser les fichiers.
-   - Choisissez l'emplacement de sauvegarde et le nom du fichier compressé.
+4. **Compression and Saving:**
+   - Click on "Compress" to compress the files.
+   - Choose the saving location and the name for the compressed file.
 
-5. **Réinitialisation de la sélection :**
-   - Cliquez sur "Reset" pour effacer la sélection de fichiers.
+5. **Resetting the Selection:**
+   - Click on "Reset" to clear the file selection.
 
-## Dépendances
+## Dependencies
 
-L'application utilise Ghostscript pour la compression des PDF. Ghostscript est inclus avec l'exécutable, donc aucune installation supplémentaire n'est nécessaire.
+The application uses Ghostscript for PDF compression. Ghostscript is included with the executable, so no additional installation is necessary.
 
 ## Compilation
 
-Si vous souhaitez compiler le projet par vous-même, suivez les instructions ci-dessous :
+If you want to compile the project yourself, follow the instructions below:
 
-1. **Pré-requis :**
-   - Installez [Python](https://www.python.org/downloads/).
-   - Installez [PyInstaller](https://pyinstaller.org/).
-
-   ```bash
-   pip install pyinstaller
-   ```
-   
-2.Téléchargement du projet
-
-Clonez le dépôt GitHub :
+1. **Prerequisites:**
+   - Install [Python](https://www.python.org/downloads/).
+   - Install [PyInstaller](https://pyinstaller.org/).
 
 ```bash
-git clone https://github.com/votre-utilisateur/PDFCompressor.git
-cd PDFCompressor
-```
+pip install pyinstaller
+  ```
 
-3.Compilation :
+2. **Project Download**
 
-Utilisez PyInstaller pour créer l'exécutable :
+Clone the GitHub repository:
 
 ```bash
 Copier le code
+git clone https://github.com/your-username/PDFCompressor.git
+cd PDFCompressor
+```
+
+3.Compilation:
+
+Use PyInstaller to create the executable:
+
+```bash
 pyinstaller PDFCompressor.spec
 ```
-L'exécutable sera généré dans le répertoire dist/PDFCompressor.
+The executable will be generated in the dist/PDFCompressor directory.
 
-## Prochaines Versions
-
-Je travaille actuellement sur une version 2 de PDFCompressor avec une interface utilisateur améliorée et plus intuitive. Restez à l'écoute pour les mises à jour !
+## Future Versions
+I am currently working on version 2 of PDFCompressor with an enhanced and more intuitive user interface. Stay tuned for updates!
 
 ## Contributions
+Contributions are welcome! If you have suggestions or improvements, feel free to create an issue or submit a pull request.
 
-Les contributions sont les bienvenues ! Si vous avez des suggestions ou des améliorations, n'hésitez pas à créer une issue ou à soumettre une pull request.
-
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
