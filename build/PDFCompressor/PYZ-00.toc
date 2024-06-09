@@ -1,4 +1,4 @@
-('C:\\Users\\TAT\\Desktop\\pypdfcompiler\\build\\PDFCompressor\\PYZ-00.pyz',
+('C:\\pypdfcompiler\\build\\PDFCompressor\\PYZ-00.pyz',
  [('_compat_pickle',
    'C:\\Users\\TAT\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\_compat_pickle.py',
    'PYMODULE'),
